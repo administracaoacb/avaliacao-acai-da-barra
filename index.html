@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações do Meu Estabelecimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Avalie nosso Estabelecimento!</h1>
+
+    <form id="form-avaliacao">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <select name="nota" required>
+            <option value="">Sua nota</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+        <textarea name="comentario" placeholder="Escreva seu comentário..." required></textarea>
+        <button type="submit" id="submit-button">Enviar Avaliação</button>
+        <p id="sending-message" style="display: none;">Enviando...</p>
+    </form>
+
+    <hr>
+
+    <h2>O que nossos clientes dizem:</h2>
+    <div id="secao-avaliacoes">
+        <p>Carregando avaliações...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
