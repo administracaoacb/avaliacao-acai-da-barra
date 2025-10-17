@@ -1,8 +1,5 @@
-// !! IMPORTANTE: SUBSTITUA AS DUAS URLs ABAIXO !!
-// 1. A URL do seu App da Web do Google Sheets (para ENVIAR dados)
+// !! SUAS URLs CORRETAS !!
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxwk78_4vz1Bv_SHDfocIRu-XR42aJ1PbA9jUizHCpCOLXo8BB7VbDrni36-aP7okXZ/exec';
-
-// 2. A URL da sua planilha publicada como CSV (para LER os dados)
 const URL_PLANILHA_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTVxhYr4ms2LGmiD1WNwSaHVuNUMHTisj3N4PB_osZuyH73XSZYst4kEynEh8JEMAWRH9nCHNNmnQQy/pub?output=csv';
 
 const form = document.getElementById('form-avaliacao');
@@ -30,6 +27,21 @@ form.addEventListener('submit', (e) => {
         });
 });
 
+// NOVA FUNÇÃO PARA FORMATAR A DATA CORRETAMENTE
+function formatarData(dataString) {
+  try {
+    // Tenta primeiro parsear como ISO (o novo formato)
+    if (dataString.includes('T')) {
+      const dataObj = new Date(dataString);
+      return dataObj.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    }
+    // Se não for ISO, é o formato antigo que já dava erro
+    return 'Data Inválida'; 
+  } catch (e) {
+    return 'Data Inválida';
+  }
+}
+
 function carregarAvaliacoes() {
     const secaoAvaliacoes = document.getElementById('secao-avaliacoes');
 
@@ -56,10 +68,12 @@ function carregarAvaliacoes() {
                 if(nome) {
                     const divAvaliacao = document.createElement('div');
                     divAvaliacao.className = 'avaliacao';
+                    
+                    // LINHA ABAIXO FOI ATUALIZADA
                     divAvaliacao.innerHTML = `
                         <p><strong>${nome}</strong> - ${'⭐'.repeat(nota)}</p>
                         <p>"${comentario}"</p>
-                        <small>${new Date(data).toLocaleDateString('pt-BR')}</small>
+                        <small>${formatarData(data)}</small> 
                     `;
                     secaoAvaliacoes.appendChild(divAvaliacao);
                 }
