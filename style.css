@@ -57,9 +57,9 @@ input, select, textarea {
 
 /* Efeito profissional ao clicar no campo */
 input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #00897b; /* Cor de destaque */
-    box-shadow: 0 0 0 4px rgba(0, 137, 123, 0.1);
+    outline: none;
+    border-color: #7b2cbf; /* Cor de destaque */
+    box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.1); /* Aura roxa */
 }
 
 textarea {
@@ -69,34 +69,34 @@ textarea {
 
 /* --- BOTÃO DE ENVIAR --- */
 button {
-    padding: 14px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: #00897b; /* Verde mais vibrante */
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #7b2cbf; /* Novo roxo */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background-color: #00695c; /* Tom mais escuro */
-    transform: translateY(-2px); /* Efeito de "levantar" */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #5a1f8e; /* Roxo mais escuro */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* --- CARDS DE AVALIAÇÃO --- */
 #secao-avaliacoes .avaliacao {
-    background: #ffffff;
-    padding: 20px 25px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.04);
-    border-left: 5px solid #00897b; /* Destaque da marca */
-    overflow-wrap: break-word; /* Garante que comentários longos quebrem a linha */
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+    border-left: 5px solid #7b2cbf; /* Novo roxo */
+    overflow-wrap: break-word; /* Garante que comentários longos quebrem a linha */
 }
 
 .avaliacao p {
