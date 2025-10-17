@@ -45,7 +45,11 @@ function formatarData(dataString) {
 function carregarAvaliacoes() {
     const secaoAvaliacoes = document.getElementById('secao-avaliacoes');
 
-    fetch(URL_PLANILHA_CSV)
+    // ** LINHA CORRIGIDA ABAIXO PARA EVITAR O CACHE **
+    // Adicionamos um carimbo de data/hora para garantir que o navegador busque os dados mais recentes.
+    const urlParaBuscar = URL_PLANILHA_CSV + '&timestamp=' + new Date().getTime();
+
+    fetch(urlParaBuscar) // Usamos a nova URL anti-cache
         .then(response => response.text())
         .then(data => {
             secaoAvaliacoes.innerHTML = ''; 
