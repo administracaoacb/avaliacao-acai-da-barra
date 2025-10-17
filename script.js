@@ -1,6 +1,6 @@
 // !! IMPORTANTE: SUBSTITUA AS DUAS URLs ABAIXO !!
 // 1. A URL do seu App da Web do Google Sheets (para ENVIAR dados)
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzFF0MQGxe7WTqZlFd7dR1m5lBSKPVhQu8G2h8KO1OE0_AcVkV8kIyEp-p92hyEo0pX/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwii7bVoyPsZdNkOFjQIbxhP9b62jAqy0kB6BMpfDRtHBj5E7Rr4ojNsxaF5u6PW15O/exec';
 
 // 2. A URL da sua planilha publicada como CSV (para LER os dados)
 const URL_PLANILHA_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTVxhYr4ms2LGmiD1WNwSaHVuNUMHTisj3N4PB_osZuyH73XSZYst4kEynEh8JEMAWRH9nCHNNmnQQy/pub?output=csv';
