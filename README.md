@@ -1,1 +1,0 @@
-# AVALIA-O-A-A-DA-BARRA
