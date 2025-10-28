@@ -1,5 +1,5 @@
 // !! SUAS URLs CORRETAS !!
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxwk78_4vz1Bv_SHDfocIRu-XR42aJ1PbA9jUizHCpCOLXo8BB7VbDrni36-aP7okXZ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbycjhAeNpduY78URKfoHwOWBdzqielipfte7QaSsgHdahz5wlbiIvi8YESpM2YdOfCJ/exec';
 const URL_PLANILHA_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTVxhYr4ms2LGmiD1WNwSaHVuNUMHTisj3N4PB_osZuyH73XSZYst4kEynEh8JEMAWRH9nCHNNmnQQy/pub?output=csv';
 
 const form = document.getElementById('form-avaliacao');
